@@ -1,7 +1,6 @@
 ﻿//!OpenSCAD
 
-Generate = "baseplate";
-Generate_Options = len("cup") + len("abc");
+Generate = "baseplate"; // ["cup", "baseplate"]
 width_X = 1;
 depth_Y = 4;
 height_Z = 2;
