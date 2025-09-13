@@ -1,5 +1,18 @@
 ﻿//!OpenSCAD
 
+Generate = "baseplate";
+Generate_Options = len("cup") + len("abc");
+width_X = 1;
+depth_Y = 4;
+height_Z = 2;
+pad_base_left = 4.5;
+pad_base_right = 4.5;
+pad_base_front = 2;
+pad_base_rear = 4;
+hollow = true;
+
+$fn = $preview ? 32 : 256;
+
 module makebase() {
   union(){
     hull(){
@@ -104,16 +117,6 @@ module makerecess() {
   }
 }
 
-Generate = "baseplate";
-Generate_Options = len("cup") + len("abc");
-width_X = 1;
-depth_Y = 4;
-height_Z = 2;
-pad_base_left = 4.5;
-pad_base_right = 4.5;
-pad_base_front = 2;
-pad_base_rear = 4;
-hollow = true;
 if (Generate == "cup") {
   difference() {
     union(){
